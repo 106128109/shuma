@@ -1,0 +1,72 @@
+<div id="footer" class="w-full">
+  <div class="foot-baozhang">
+    <div class="flow w">
+      <div class="item first"><i class="zp"></i><span>正品保障</span></div>
+      <div class="item"><i class="qt"></i><span>七天包退</span></div>
+      <div class="item"><i class="hp"></i><span>好评如潮</span></div>
+      <div class="item"><i class="sd"></i><span>闪电发货</span></div>
+      <div class="item"><i class="ry"></i><span>权威荣誉</span></div>
+    </div>
+  </div>
+
+  <div class="foot-group w clearfix">
+    <div class="float-left tel">
+      <dl class="clearfix">
+        <dt class="float-left"><img src="{res file='images/call.png'}"></dt>
+        <dd class="float-left ml20 mt10">
+          <h3>010-555888</h3>
+          <p>周一到周五 9:00 - 17:30</p>
+        </dd>
+      </dl>
+    </div>
+    <div class="float-left footnav">
+      <ul class="clearfix">
+        <li class="float-left"><a href="" target="_blank">ShopWind</a><span>|</span></li>
+        <li class="float-left"><a href="" target="_blank">支付方式</a><span>|</span></li>
+        <li class="float-left"><a href="" target="_blank">法律条款</a><span>|</span></li>
+        <li class="float-left"><a href="" target="_blank">合作代理</a><span>|</span></li>
+        <li class="float-left"><a href="" target="_blank">电商系统</a><span>|</span></li>
+        <li class="float-left"><a href="" target="_blank">友情链接</a><span>|</span></li>
+        <li class="float-left last"><a href="" target="_blank">联系我们</a></li>
+      </ul>
+      <div class="copy">
+        <p>Copyright &copy; 2015-2022 <a href="/" class="ml5 mr5">邯郸市盛湖科技有限公司</a> 版权所有 <!--{if $icp_number}--><a href="https://beian.miit.gov.cn" target="_blank">{$icp_number}</a><!--{/if}--></p>
+        <p>常年法律顾问：广西百纳律师事务所 TEL: 010-555888</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot-fixed J_FootFixed">
+    <div class="foot-fixed-box"> 
+	    <a class="cart j-icon J_F_CardItem" href="{url route='cart/index'}"><i></i><em class="count-cart J_C_T_GoodsKinds">{$carts_top.kinds|default:0}</em></a>
+      <a class="qq j-icon" href="{url route='webim/index'}" target="_blank"><i>qq</i>{if $visitor.unread gt 0}<em>{$visitor.unread}</em>{/if}</a> 
+      <a class="tel j-icon J_Icon"><i>tel</i></a> 
+      <a class="code j-icon J_Icon"><i>code</i></a> 
+      <a class="backtop j-icon"><i>back_top</i></a>
+      <div class="tel j-box J_Box"><strong>服务热线：</strong>
+        <p>010-555888</p>
+        <i></i>
+      </div>
+     
+    </div>
+  </div>
+  <script type="text/javascript">
+  	$(function(){
+		$(".J_FootFixed").find(".J_Icon").hover(function(){  
+        	$(".J_FootFixed").find(".J_Box").eq($(this).index()-2).show().siblings(".J_Box").hide();
+		});
+		$(".J_FootFixed").hover(function(){
+		}, function(){
+			$(".J_FootFixed").find(".J_Box").hide();
+		});
+	});
+  </script> 
+</div>
+<script type="text/javascript" src="{lib file='jquery.plugins/SuperSlide/jquery.SuperSlide.2.1.2.js'}" charset="{$app->charset}"></script>
+<script type="text/javascript" src="{lib file='layui/layui.js'}" charset="{$app->charset}"></script>
+<script type="text/javascript" src="{lib file='shopwind.js'}" charset="{$app->charset}"></script>
+{$_foot_tags|default}
+<script type="text/javascript" src="{res file='js/global.js'}" charset="{$app->charset}"></script>
+<script type="text/javascript" src="{res file='js/main.js'}" charset="{$app->charset}"></script>
+{$statistics_code}
+</body>
+</html>
